@@ -9,10 +9,17 @@ local IdentifierTables = {
     {table = "billing", column = "identifier"},
     {table = "datastore_data", column = "owner"},
     {table = "owned_vehicles", column = "owner"},
-    {table = "owned_properties", column = "owner"},
+    --{table = "owned_properties", column = "owner"},
     {table = "rented_vehicles", column = "owner"},
     {table = "users", column = "identifier"},
-    {table = "user_licenses", column = "owner"}
+    {table = "user_licenses", column = "owner"},
+    --{table = "accounts", column = "owner"},
+   --{table = "datastores", column = "owner"},
+    --{table = "inventories", column = "owner"},
+ --   {table = "phone_calls", column = "owner"},
+ --   {table = "phone_messages", column = "owner"},
+    {table = "phone_users_contacts", column = "identifier"},
+    {table = "society_moneywash", column = "identifier"}
 }
 
 RegisterServerEvent("kashactersS:SetupCharacters")
@@ -33,7 +40,7 @@ AddEventHandler('kashactersS:CharacterChosen', function(charid, ischar)
     if type(charid) == "number" and string.len(charid) == 1 and type(ischar) == "boolean" then
         SetLastCharacter(src, tonumber(charid))
         SetCharToIdentifier(GetRockstarID(src), tonumber(charid))
-    
+
         if ischar == true then
             new = false
             spawn = GetSpawnPos(src)
@@ -71,12 +78,12 @@ function GetPlayerCharacters(source)
         if charJob[1].label == "Unemployed" then
             Chars[i].job_grade = ""
         else
-            Chars[i].job_grade = charJobgrade[1].label	
+            Chars[i].job_grade = charJobgrade[1].label
         end
         if Chars[i].sex == "m" then
             Chars[i].sex = "Male"
         else
-            Chars[i].sex = "Female"	
+            Chars[i].sex = "Female"
         end
     end
     return Chars
