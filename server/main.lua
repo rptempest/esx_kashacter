@@ -9,15 +9,8 @@ local IdentifierTables = {
     {table = "billing", column = "identifier"},
     {table = "datastore_data", column = "owner"},
     {table = "owned_vehicles", column = "owner"},
-    --{table = "owned_properties", column = "owner"},
-    {table = "rented_vehicles", column = "owner"},
     {table = "users", column = "identifier"},
     {table = "user_licenses", column = "owner"},
-    --{table = "accounts", column = "owner"},
-   --{table = "datastores", column = "owner"},
-    --{table = "inventories", column = "owner"},
- --   {table = "phone_calls", column = "owner"},
- --   {table = "phone_messages", column = "owner"},
     {table = "phone_users_contacts", column = "identifier"},
     {table = "society_moneywash", column = "identifier"}
 }
