@@ -19,9 +19,7 @@ files {
     'html/ui.html',
     'html/css/main.css',
     'html/js/app.js',
-    'html/locales/fr.js',
     'html/locales/en.js',
-    'html/locales/pl.js',
 }
 
 dependency 'es_extended'
